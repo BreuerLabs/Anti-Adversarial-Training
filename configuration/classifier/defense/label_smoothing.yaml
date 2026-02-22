@@ -1,0 +1,3 @@
+name: label_smoothing
+alpha: -0.05 # The struppek defense is based on using a negative value of smoothing factor. The authors recommend -0.05 as a reasonable starting point.
+ls_scheduler: True

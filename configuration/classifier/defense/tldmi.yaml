@@ -1,0 +1,2 @@
+name: "tldmi"
+freeze_layers: 6 # makes theta_C = 8.9M for ResNet-18, used in TL-DMI paper. For ResNet-152, theta_C = 16.0M, which means you're letting far fewer weights update, but this seems to match the freezing ratio in the paper for models of similar size to ResNet-152.
