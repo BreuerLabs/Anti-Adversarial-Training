@@ -94,7 +94,6 @@ kagglehub==0.3.5
 kiwisolver==1.4.7
 kornia==0.7.1
 lazy_loader==0.4
-lcapt @ git+https://github.com/lanl/lca-pytorch.git@6811a53ea9703f98fd85c32fc415942e1b56d6b4
 libcst==1.1.0
 lightning-utilities==0.11.8
 linkify-it-py==2.0.3
