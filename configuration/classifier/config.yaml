@@ -1,0 +1,9 @@
+# configuration/config.yaml
+defaults:
+  - model: pretrained   # Yaml file describing which model and hyperparameters to use
+  - dataset: FaceScrub # Yaml file with dataset specific parameters
+  - training: default # Yaml file with training specific parameters
+  - defense: no_defense # Yaml file with defense specific parameters
+  - _self_
+
+load_from_wandb_id: False # else give a wandb run id from which to continue training

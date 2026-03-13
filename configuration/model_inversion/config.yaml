@@ -1,0 +1,8 @@
+
+defaults:
+  - attack: plug_and_play   # Yaml file describing which model and hyperparameters to use
+  - training: default # Yaml file with training specific parameters
+  - _self_
+
+target_wandb_id: "wandb_run_id" # The wandb id of the run of the target model. This will then extract the config and model weights from wandb.
+target_config_path: False #"classifiers/saved_configs/cifardropout.yaml" # The path to a config of a trained target model. Weights with the same name must be in classifiers/saved_models

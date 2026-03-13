@@ -25,7 +25,6 @@ secret.txt
 *.DS_Store
 .DS_store
 
-config.yaml
 /classifiers/saved_configs
 # /configuration/model_inversion/training/local.yaml
 # /configuration/classifier/training/local.yaml
