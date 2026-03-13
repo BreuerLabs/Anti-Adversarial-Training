@@ -85,17 +85,11 @@ def apply_adversarial_training_defense(config, model:AbstractClassifier):
                 else:
                     # For untargeted attacks, we want to see if the model is fooled into predicting a different class
                     attack_success_sum += (pred_adv != target).sum()
-                
-                if self.config.defense.use_adversarial_label: #! Maybe not needed
-                    target = pred_adv
                     
                 if self.targeted:
                     loss_adv = self.get_loss(output_adv, attack_target)
                 else:
                     loss_adv = self.get_loss(output_adv, target)
-                
-                if self.config.defense.loss_weighting.adversarial_log_scale:
-                    loss_adv = torch.log(loss_adv + 1e-8)
                 
                 loss = self.config.defense.loss_weighting.standard * loss_normal + self.config.defense.loss_weighting.adversarial * loss_adv
 
