@@ -2,12 +2,10 @@ from defenses.label_smoothing import apply_label_smoothing_defense
 from defenses.bido import apply_bido_defense
 from defenses.mid import apply_MID_defense
 from defenses.tldmi import apply_TLDMI_defense
-from defenses.gaussian_noise import apply_gaussian_noise_defense
 from defenses.rolss import apply_RoLSS_defense
 from defenses.sparse import apply_sparse_defense
 from defenses.adversarial_train import apply_adversarial_training_defense
 from defenses.drop_layer import apply_drop_layer_defense
-from defenses.ffhq import apply_ffhq_defense
 from defenses.trap_mid import apply_trap_mid_defense
 
 def get_defense(config, model):
