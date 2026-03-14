@@ -27,7 +27,6 @@ import model_inversion.ppdg.attack as ppdg
 import model_inversion.ppdg.modify_to_repo as ppdg_modify
 
 from utils import wandb_helpers, load_trained_models
-from utils.lambdalabs.scripting import terminate_lambdalabs_instance
 
 @hydra.main(config_path="configuration/model_inversion", config_name="config.yaml", version_base="1.3")
 def run_model_inversion(attack_config):
@@ -182,13 +181,6 @@ def run_model_inversion(attack_config):
             wandb_run = wandb_run)
         
     print("done")
-
-    if attack_config.LL_terminate_on_end:
-        if attack_config.LL_sleep_before_terminate:
-            print("Sleeping before LL termination... ")
-            time.sleep(int(attack_config.LL_sleep_before_terminate))
-        print("Terminating current Lambda Labs instance... ")
-        terminate_lambdalabs_instance()
     
 if __name__ == "__main__":
     run_model_inversion()
