@@ -1,11 +1,5 @@
 ### Codebase for: _"Reducing information dependency does not cause training data privacy. Adversarially non-robust features do."_ (ICLR 2026)
 
-Our code is:
-- Streamlined: Focus on what's important and skip boilerplate;
-- Comprehensive;
-- Integrated with Weights and Biases (W&B), Hydra, etc.
-- Scalable and maintainable.
-
 ### Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
